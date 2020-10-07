@@ -1,0 +1,14 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.App {
+  background-color: #E5E5E5;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

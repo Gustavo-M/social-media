@@ -1,0 +1,29 @@
+.container {
+  background-color: #FFFFFF;
+}
+
+.content {  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1060px;
+  margin: auto;
+  padding: 15px 5px;
+}
+
+.dadosAvatar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dadosAvatar img {
+  margin: 0 8px 0 0;
+}
+
+.dadosAvatar h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}
