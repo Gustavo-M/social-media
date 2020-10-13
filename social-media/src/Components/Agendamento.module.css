@@ -1,0 +1,14 @@
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1390px;
+  margin: auto;
+}
+
+.contentDados {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 100%;
+  max-width: 671px;
+}

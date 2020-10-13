@@ -1,12 +1,16 @@
 import React from 'react';
 import styles from './Agendamento.module.css';
 import Redes from './Redes';
+import DataPublicacao from './DataPublicacao';
 
 const Agendamento = ()=> {
 
   return (
     <div className={styles.content}>
-      <Redes />
+      <div className={styles.contentDados}>
+        <Redes />
+        <DataPublicacao />
+      </div>
     </div>
   )
 }

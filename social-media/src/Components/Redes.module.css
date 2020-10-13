@@ -1,37 +1,39 @@
 .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1060px;
-  margin: auto;
-  padding: 60px 5px;
+  padding: 60px 0px;
 }
 
 .content {
-  width: 315px;
   background-color: #ffffff;
   border: 1px solid #E0E0E0;
   border-radius: 4px;
+  min-height: 110px;
 }
 
 .content h1 {
-  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   border-bottom: 1px solid #E0E0E0;
-  padding-bottom: 10px;
-  padding-left: 15px;
+  padding: 0px 10px;
 }
 
 ul.iconsRedes {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 15px;
-  margin: 0px;
+  padding: 0px;
 }
 
 ul.iconsRedes li {
   list-style: none;
+}
+
+ul.iconsRedes li img.clic {
+  background-color: #fff3e0;
+  border-radius: 50%;
+  transition-duration: 0.3s;
+}
+
+ul.iconsRedes li:hover {
+  cursor: pointer;
 }

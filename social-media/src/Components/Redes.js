@@ -9,28 +9,36 @@ import facebook from '../img/facebook.svg';
 
 const Redes = () => {
 
+  const [redes, setRedes] = React.useState(null);
+
+  function handleClick ({target}){
+    setRedes(target.alt);
+  }
+
   return (
     <section className={styles.container}>
       <div className={styles.content}>
         <h1>Redes sociais</h1>
         <ul className={styles.iconsRedes}>
           <li>
-            <img src={instagram} alt=""/>
+              <img src={instagram} alt="Instagram" onClick={handleClick} 
+              className={redes === 'Instagram' ? `${styles.clic}` : ''}/>
           </li>
           <li>
-            <img src={linkedin} alt=""/>
+              <img src={linkedin} alt="Linkedin" onClick={handleClick} 
+              className={redes === 'Linkedin' ? `${styles.clic}` : ''}/>
           </li>
           <li>
-            <img src={youtube} alt=""/>
+             <img src={youtube} alt="Youtube"/>
           </li>
           <li>
-            <img src={pinterest} alt=""/>
+             <img src={pinterest} alt="Pinterest"/>
           </li>
           <li>
-            <img src={twitter} alt=""/>
+             <img src={twitter} alt="Twitter"/>
           </li>
           <li>
-            <img src={facebook} alt=""/>
+             <img src={facebook} alt="Facebook"/>
           </li>
         </ul>
       </div>
