@@ -11,8 +11,7 @@ const DataPublicacao = () => {
 
   function handleChange(event) {
    const dataFormatada = format( parseISO(event.target.value), 'dd/MM/yyyy');
-   //setData(dataFormatada);
-   console.log(dataFormatada);
+   setData(dataFormatada);
   }
 
   return (
@@ -20,7 +19,7 @@ const DataPublicacao = () => {
       <div className={styles.content}>
         <h1>Data de publicação</h1>
         <form>
-          <input type="date" value={data} onChange={handleChange}/>
+          <input type="date" onChange={handleChange}/>
           <input type="time" name="time" value={hora} onChange={(event) => setHora(event.target.value)}/>
         </form>
       </div>

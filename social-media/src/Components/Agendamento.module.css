@@ -1,6 +1,6 @@
 .content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   max-width: 1390px;
   margin: auto;
 }
@@ -11,4 +11,9 @@
   gap: 40px;
   width: 100%;
   max-width: 671px;
+}
+
+.contentDadosPost {
+  display: grid;
+  grid-template-columns: 1fr;
 }

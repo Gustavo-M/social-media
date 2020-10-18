@@ -6,12 +6,17 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "add": "^2.0.6",
     "date-fns": "^2.16.1",
+    "emoji-picker-react": "^3.2.4",
     "history": "^5.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-dropzone": "^11.2.0",
+    "react-icons": "^3.11.0",
     "react-router-dom": "^6.0.0-beta.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "yarn": "^1.22.10"
   },
   "scripts": {
     "start": "react-scripts start",
