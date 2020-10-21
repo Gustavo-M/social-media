@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Upload.module.css';
 import { useDropzone } from 'react-dropzone';
+import { FaCloudUploadAlt } from "react-icons/fa";
 
 const Upload = () => {
 
@@ -34,10 +35,10 @@ const Upload = () => {
         <div className={styles.UpContainer}>
           <div {...getRootProps()} className={styles.stage}>
             <input {...getInputProps()} />
-            <div className={styles.uploadIcon}></div>
+            <FaCloudUploadAlt className={styles.uploadIcon} />
             <p>Arraste e solte uma imagem aqui ou clique no botão abaixo</p>
+            <button className={styles.upBtn}>Pesquisar imagens</button>
           </div>
-          <div>{images}</div>
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 .container {
-  padding: 40px 0px 30px;
+  padding: 30px 0px 20px;
 }
 
 .content {
@@ -28,12 +28,30 @@ ul.iconsRedes li {
   list-style: none;
 }
 
-ul.iconsRedes li img.clic {
-  background-color: #fff3e0;
+.icons, .disabled, .ativo {
+  border: 1px solid #9E9E9E;
   border-radius: 50%;
-  transition-duration: 0.3s;
+  width: 17px;
+  height: auto;
+  padding: 8px;
+  outline: 0;
 }
 
-ul.iconsRedes li:hover {
+.icons:hover {
+  background-color: #FFF3E0;
+  border-color: #EF9F2E;
+  color: #EF9F2E;
   cursor: pointer;
+}
+
+.ativo {
+  background: linear-gradient(135deg, #EF9F2E 25%, #E02B4B 105.56%);
+  border-color: #EF9F2E;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.disabled{
+  background-color: #DDDDDD;
+  color: #989898;
 }
