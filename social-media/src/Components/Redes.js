@@ -10,7 +10,18 @@ library.add(faInstagram, faLinkedinIn, faYoutube, faPinterestP, faTwitter, faFac
 
 const Redes = () => {
 
-  const [active, setActive] = React.useState(true);
+  const [active, setActive] = React.useState('');
+
+  const newOrder = socialMedia.data.map((item) => (
+    {
+      id: item.id,
+      name: item.name,
+      icon: item.icon,
+      status: item.status
+    }
+  ))
+
+  newOrder.push(newOrder.splice(0,1)[0]);
 
   return (
     <section className={styles.container}>
@@ -18,9 +29,17 @@ const Redes = () => {
         <h1>Redes sociais</h1>
 
         <ul className={styles.iconsRedes}>
-          {socialMedia.data.map((iconRedes) => (
+          {newOrder.map((iconRedes) => (
             <li key={iconRedes.id}>
-              <FontAwesomeIcon className={styles.disabled} icon={['fab', `${iconRedes.icon}`]} />
+              <button 
+                disabled={iconRedes.status === 'disabled'}
+                onClick={() => 
+                setActive(iconRedes.name)} 
+                className={active === iconRedes.name ? styles.enabled : ''}>
+                  <FontAwesomeIcon                
+                    icon={['fab', `${iconRedes.icon}`]} 
+                 />
+              </button>
             </li>
           ))}
         </ul>

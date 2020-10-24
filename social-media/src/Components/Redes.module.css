@@ -17,41 +17,49 @@
   padding: 0px 10px;
 }
 
-ul.iconsRedes {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+ul {
   padding: 0px;
+  margin: 0px;
 }
 
-ul.iconsRedes li {
+.iconsRedes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.iconsRedes li {
   list-style: none;
 }
 
-.icons, .disabled, .ativo {
+li > button {
   border: 1px solid #9E9E9E;
-  border-radius: 50%;
-  width: 17px;
-  height: auto;
-  padding: 8px;
+  border-radius: 100%;
   outline: 0;
+  background-color: #DDDDDD;
+  color: #333333;
+  width: 33px;
+  height: 33px;
 }
 
-.icons:hover {
+li > button:disabled {
+  color: #989898;
+}
+
+li > button:enabled {
+  background-color: #ffffff;
+}
+
+li > button:hover:enabled {
   background-color: #FFF3E0;
-  border-color: #EF9F2E;
+  border: 1px solid #EF9F2E;
   color: #EF9F2E;
   cursor: pointer;
 }
 
-.ativo {
+.enabled {
   background: linear-gradient(135deg, #EF9F2E 25%, #E02B4B 105.56%);
-  border-color: #EF9F2E;
-  color: #ffffff;
+  border: 1px solid #EF9F2E;
+  color: #ffffff!important;
   cursor: pointer;
 }
 
-.disabled{
-  background-color: #DDDDDD;
-  color: #989898;
-}
