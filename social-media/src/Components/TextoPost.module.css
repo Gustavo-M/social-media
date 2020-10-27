@@ -14,7 +14,11 @@
   padding: 0px 10px;
 }
 
-textarea {
+form{
+  position: relative;
+}
+
+.txtArea {
   border: 1px solid #949494;
   width: 100%;
   max-width: 639px;
@@ -27,4 +31,13 @@ textarea {
   color: #4F4F4F;
   resize: none;
   margin-bottom: 10px;
+  outline: 0;
+}
+
+.iconSmile{
+  color: #949494;
+  position: absolute;
+  top: 7px;
+  right: 40px;
+  cursor: pointer;
 }

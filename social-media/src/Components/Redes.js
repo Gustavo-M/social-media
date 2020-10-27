@@ -12,16 +12,29 @@ const Redes = () => {
 
   const [active, setActive] = React.useState('');
 
-  const newOrder = socialMedia.data.map((item) => (
-    {
-      id: item.id,
-      name: item.name,
-      icon: item.icon,
-      status: item.status
-    }
-  ))
+  const {data} = socialMedia;
 
-  newOrder.push(newOrder.splice(0,1)[0]);
+  const moverFinal = (arr, key, value) => {
+    let item
+
+    let novoArr = arr.reduce((acc, curr) => {
+      if(curr[key] === value){
+        item = curr
+      }else {
+        acc.push(curr)
+      }
+      
+      return acc
+    }, [])
+
+    novoArr.push(item)
+
+    return novoArr
+  }
+
+
+  const newOrder = moverFinal(data, 'name', 'Facebook');
+
 
   return (
     <section className={styles.container}>

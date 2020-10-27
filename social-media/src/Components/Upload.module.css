@@ -33,8 +33,7 @@
 }
 
 .uploadIcon{
-  width: 46px;
-  height: 31px;
+  font-size: 30px;
   background-size: 100%;
   text-align: center;
   margin: 0 auto;
