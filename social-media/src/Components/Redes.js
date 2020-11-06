@@ -8,7 +8,7 @@ import { faInstagram, faLinkedinIn, faYoutube, faPinterestP, faTwitter, faFacebo
 
 library.add(faInstagram, faLinkedinIn, faYoutube, faPinterestP, faTwitter, faFacebookF);
 
-const Redes = () => {
+const Redes = ({flag}) => {
 
   const [active, setActive] = React.useState('');
 
@@ -40,14 +40,16 @@ const Redes = () => {
     <section className={styles.container}>
       <div className={styles.content}>
         <h1>Redes sociais</h1>
-
+        
         <ul className={styles.iconsRedes}>
           {newOrder.map((iconRedes) => (
             <li key={iconRedes.id}>
               <button 
                 disabled={iconRedes.status === 'disabled'}
-                onClick={() => 
-                setActive(iconRedes.name)} 
+                onClick={(() => {
+                  setActive(iconRedes.name)
+                  flag(iconRedes.name)
+                })} 
                 className={active === iconRedes.name ? styles.enabled : ''}>
                   <FontAwesomeIcon                
                     icon={['fab', `${iconRedes.icon}`]} 

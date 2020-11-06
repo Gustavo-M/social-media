@@ -38,7 +38,7 @@ li > button {
   background-color: #DDDDDD;
   color: #333333;
   width: 33px;
-  height: 33px;
+  height: 32px;
 }
 
 li > button:disabled {

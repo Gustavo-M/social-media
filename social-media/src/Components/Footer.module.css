@@ -1,0 +1,54 @@
+.container {
+  background-color: #ffffff;
+  margin-top: 30px;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1390px;
+  margin: auto;
+  padding: 15px 0px;
+}
+
+.groupButtons{  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.groupButtons button{
+  width: 184px;
+  padding: 10px 20px;
+  font-weight: bold;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  border: 1px solid #2F80ED;
+  background-color: #ffffff;
+  color: #2F80ED;
+}
+
+.groupButtons button:disabled{
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.groupButtons button.footerBtnActive{
+  border: 1px solid #2F80ED;
+  background-color: #2F80ED;
+  color: #ffffff;
+}
+
+.links{
+  text-decoration: none;
+  color: #2F80ED;
+  font-size: 16px;
+  cursor: pointer;
+  background: #ffffff;
+  border: none;
+  outline: 0;
+}

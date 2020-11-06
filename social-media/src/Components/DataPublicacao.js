@@ -4,7 +4,7 @@ import { format, parseISO } from 'date-fns';
 
 import styles from './DataPublicacao.module.css';
 
-const DataPublicacao = () => {
+const DataPublicacao = ({flag}) => {
 
   const [data, setData] = React.useState('');
   const [hora, setHora] = React.useState('');
@@ -12,6 +12,7 @@ const DataPublicacao = () => {
   function handleChange(event) {
    const dataFormatada = format( parseISO(event.target.value), 'dd/MM/yyyy');
    setData(dataFormatada);
+   flag(dataFormatada)
   }
 
   return (
@@ -20,7 +21,14 @@ const DataPublicacao = () => {
         <h1>Data de publicação</h1>
         <form>
           <input type="date" onChange={handleChange}/>
-          <input type="time" name="time" value={hora} onChange={(event) => setHora(event.target.value)}/>
+          <input 
+            type="time" 
+            name="time" 
+            value={hora} 
+            onChange={((event) => {
+              setHora(event.target.value); 
+              flag(event.target.value);
+            })}/>
         </form>
       </div>
     </section>

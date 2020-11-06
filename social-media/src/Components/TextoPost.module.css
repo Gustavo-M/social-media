@@ -4,6 +4,7 @@
   border-radius: 4px;
   width: 100%;
   max-width: 671px;
+  position: relative;
 }
 
 .content h1 {
@@ -14,7 +15,7 @@
   padding: 0px 10px;
 }
 
-form{
+.containerForm{
   position: relative;
 }
 
@@ -25,7 +26,8 @@ form{
   height: 146px;
   border-radius: 10px;
   padding: 8px;
-  box-sizing: border-box;font-weight: 500;
+  box-sizing: border-box;
+  font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   color: #4F4F4F;
@@ -40,4 +42,13 @@ form{
   top: 7px;
   right: 40px;
   cursor: pointer;
+}
+
+.boxEmoji{
+  background-color: #ffffff;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 80px;
+  right: -90px;
 }
