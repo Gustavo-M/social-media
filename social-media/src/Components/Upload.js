@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons'
 //import { FaCloudUploadAlt } from "react-icons/fa";
 
-const Upload = () => {
+const Upload = ({flag}) => {
 
   const [files, setFiles] = React.useState([]);
 
@@ -19,6 +19,7 @@ const Upload = () => {
           })
         )
       )
+      flag(acceptedFiles)
     },
   })
 

@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  max-width: 368px;
+  height: 100%;
+  min-height: 535px;
+  border: 1px solid #BDBDBD;
+  margin: 40px auto 0px;
+  border-radius: 4px;
+}
+
+.headerPost {
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 10px 15px;
+}
+
+.headerPost p {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.content .imagePreview {
+  height: 368px;
+}

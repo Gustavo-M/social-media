@@ -8,7 +8,7 @@ import { faInstagram, faLinkedinIn, faYoutube, faPinterestP, faTwitter, faFacebo
 
 library.add(faInstagram, faLinkedinIn, faYoutube, faPinterestP, faTwitter, faFacebookF);
 
-const Redes = ({flag}) => {
+const Redes = ({flag, socialMd}) => {
 
   const [active, setActive] = React.useState('');
 
@@ -49,6 +49,7 @@ const Redes = ({flag}) => {
                 onClick={(() => {
                   setActive(iconRedes.name)
                   flag(iconRedes.name)
+                  socialMd(iconRedes.name)
                 })} 
                 className={active === iconRedes.name ? styles.enabled : ''}>
                   <FontAwesomeIcon                
