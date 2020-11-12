@@ -9,8 +9,10 @@ import VisualizacaoPost from './VisualizacaoPost';
 
 const Agendamento = ()=> {
 
-  const [check, setCheck] = React.useState('');
+  const [check, setCheck] = React.useState(null);
   const [flagRedes, setFlagRedes] = React.useState('');
+  const [txtPost, setTxtPost] = React.useState(null);
+  const [imgPost, setImgPost] = React.useState(null);
 
   function info(params){
     setCheck(params);
@@ -18,6 +20,14 @@ const Agendamento = ()=> {
 
   function flRedes(rd){
     setFlagRedes(rd);
+  }
+
+  function recebeTxtPost(text) {
+    setTxtPost(text);
+  }
+
+  function recebeImgPost(img) {
+    setImgPost(img);
   }
 
   return (
@@ -29,11 +39,11 @@ const Agendamento = ()=> {
             <DataPublicacao flag={info} /> 
           </div>
           <div className={styles.preview}>
-            <VisualizacaoPost redeSelected={flagRedes} />
+            <VisualizacaoPost contentPost={txtPost} imagemPost={imgPost} redeSelected={flagRedes} />
           </div>
           <div className={styles.box2}>
-            <TextoPost flag={info} />
-            <Upload flag={info} />
+            <TextoPost content={recebeTxtPost} flag={info} />
+            <Upload content={recebeImgPost} flag={info} />
           </div>
         </div>
       </div>

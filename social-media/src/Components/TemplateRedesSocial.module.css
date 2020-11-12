@@ -24,3 +24,25 @@
 .content .imagePreview {
   height: 368px;
 }
+
+.iconsLike {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.contentPost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px 20px;
+}
+
+.content .footerPost p {
+  color: #4F4F4F;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 0px 10px 20px;
+  margin: auto;
+}

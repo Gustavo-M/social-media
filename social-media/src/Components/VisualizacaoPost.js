@@ -3,7 +3,7 @@ import styles from './VisualizacaoPost.module.css';
 import postImage from '../img/post.svg';
 import TemplateRedesSocial from './TemplateRedesSocial';
 
-const VisualizacaoPost = ({redeSelected}) => {
+const VisualizacaoPost = ({redeSelected, contentPost, imagemPost}) => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -11,7 +11,7 @@ const VisualizacaoPost = ({redeSelected}) => {
         {
           redeSelected === 'Instagram' 
           
-          ? <TemplateRedesSocial /> 
+          ? <TemplateRedesSocial descricao={contentPost} imgPost={imagemPost}/> 
           
           : <div className={styles.contentPreview}>
               <p>Aguardando conteúdo. Informe os canais e <br/>as mídias desejadas para visualização.</p>

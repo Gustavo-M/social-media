@@ -5,7 +5,7 @@ import Picker from 'emoji-picker-react';
 import styles from './TextoPost.module.css';
 
 
-const TextoPost = ({flag}) => {
+const TextoPost = ({flag, content}) => {
   
   const [mensagem, setMensagem] = React.useState('');
   const [open, setOpen] = React.useState(false);
@@ -14,6 +14,7 @@ const TextoPost = ({flag}) => {
   const onEmojiClick = (_, emojiObject) => {
     setMensagem(mensagem + emojiObject.emoji);
     flag(mensagem + emojiObject.emoji);
+    content(mensagem + emojiObject.emoji);
     setOpen(false);
   };
 
@@ -24,6 +25,7 @@ const TextoPost = ({flag}) => {
   function handleChange({target}){
     setMensagem(target.value);
     flag(target.value);
+    content(target.value);
   }
 
   return (
