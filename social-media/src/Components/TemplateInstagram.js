@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './TemplateRedesSocial.module.css';
+import styles from './TemplateInstagram.module.css';
 import logoInstagram from '../img/logo-insta.svg';
 import fotoPreview from '../img/foto.svg';
 import iconLike from '../img/icon-like.svg';

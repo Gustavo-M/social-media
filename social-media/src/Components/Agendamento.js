@@ -7,43 +7,39 @@ import Upload from './Upload';
 import Footer from './Footer';
 import VisualizacaoPost from './VisualizacaoPost';
 
-const Agendamento = ()=> {
+const Agendamento = ({setFinalData}) => {
 
   const [check, setCheck] = React.useState(null);
-  const [flagRedes, setFlagRedes] = React.useState('');
+  const [flagRedes, setFlagRedes] = React.useState(null);
   const [txtPost, setTxtPost] = React.useState(null);
   const [imgPost, setImgPost] = React.useState(null);
+  const [dataPost, setDataPost] = React.useState(null);
+  const [horaPost, setHoraPost] = React.useState(null);
 
-  function info(params){
-    setCheck(params);
-  }
-
-  function flRedes(rd){
-    setFlagRedes(rd);
-  }
-
-  function recebeTxtPost(text) {
-    setTxtPost(text);
-  }
-
-  function recebeImgPost(img) {
-    setImgPost(img);
-  }
+  React.useEffect(() => {
+    setFinalData({
+      redeSocial: flagRedes,
+      descricao: txtPost,
+      image: imgPost,
+      datas: dataPost,
+      horas: horaPost
+    });
+  }, [dataPost, flagRedes, horaPost, imgPost, txtPost, setFinalData]);
 
   return (
     <>
       <div className={styles.content}>
         <div className={styles.contentDados}>
           <div className={styles.box1}>
-            <Redes flag={info} socialMd={flRedes} />
-            <DataPublicacao flag={info} /> 
+            <Redes flag={setCheck} socialMd={setFlagRedes} />
+            <DataPublicacao content={setDataPost} contentHora={setHoraPost} flag={setCheck} /> 
           </div>
           <div className={styles.preview}>
-            <VisualizacaoPost contentPost={txtPost} imagemPost={imgPost} redeSelected={flagRedes} />
+            <VisualizacaoPost contentPost={txtPost} imagemPost={imgPost} datasPost={dataPost} redeSelected={flagRedes} />
           </div>
           <div className={styles.box2}>
-            <TextoPost content={recebeTxtPost} flag={info} />
-            <Upload content={recebeImgPost} flag={info} />
+            <TextoPost content={setTxtPost} flag={setCheck} />
+            <Upload content={setImgPost} flag={setCheck} />
           </div>
         </div>
       </div>

@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from './Upload.module.css';
 import { useDropzone } from 'react-dropzone';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons'
-//import { FaCloudUploadAlt } from "react-icons/fa";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Upload = ({flag, content}) => {
 
@@ -21,11 +20,10 @@ const Upload = ({flag, content}) => {
       )
       flag(acceptedFiles)
       content(acceptedFiles[0].preview)
-      console.log(acceptedFiles[0].preview)
     },
   })
 
-  const images = files.map((file) => (
+  files.map((file) => (
     <div key={file.name}>
       <div>
         <img src={file.preview} style={{ width: "200px" }} alt="preview" />
